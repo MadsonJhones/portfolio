@@ -11,7 +11,7 @@
 }
 
 :root {
-    --bg-color: #1f242d;
+    --bg-color: #1f272d;
     --second-bg-color: #323946;
     --main-color: #00fe00;
     --white-color: #fff;
@@ -27,7 +27,7 @@ body {
 }
 
 header {
-    position:fixed;
+    position: fixed;
     top: 0;
     left: 0;
     width: 100%;
@@ -37,6 +37,20 @@ header {
     justify-content: space-between;
     align-items: center;
     z-index: 100;
+    visibility: hidden;
+    opacity: 0;
+}
+
+header.active {
+    animation: show-header 1s linear forwards;
+    animation-delay: 1s;
+}
+
+@keyframes show-header {
+    100% {
+        visibility: visible;
+        opacity: 1;
+    }
 }
 
 .logo {
@@ -45,7 +59,7 @@ header {
     font-weight: 700;
 }
 
-nav a{
+nav a {
     font-size: 2rem;
     color: var(--white-color);
     font-weight: 500;
@@ -54,7 +68,7 @@ nav a{
 }
 
 nav a:hover,
-nav a.active{
+nav a.active {
     color: var(--main-color);
 }
 
@@ -74,10 +88,36 @@ nav a.active{
     width: 100%;
     height: 100%;
     background: var(--bg-color);
-    border: 2px solid red;
+    animation: hide-bars .5s ease-in-out both;
+    animation-delay: calc(.1s * var(--i));
 }
 
-section{
+@keyframes hide-bars {
+    0% {
+        transform: translateY(0);
+    }
+
+    100% {
+        transform: translateY(-100%);
+    }
+}
+
+.bars-box.active .bar {
+    animation: show-bars .5s ease-in-out both;
+    animation-delay: calc(.1s * var(--i));
+}
+
+@keyframes show-bars {
+    0% {
+        transform: translateY(-100);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+section {
     position: absolute;
     width: 100%;
     height: 100%;
@@ -88,9 +128,16 @@ section{
 }
 
 section.active {
-    visibility: visible;
-    opacity: 1;
-    overflow: auto;
+animation: show-content 1s linear forwards;
+animation-delay: 1s;
+}
+
+@keyframes show-content {
+    100% {
+        visibility: visible;
+        opacity: 1;
+        overflow: auto;
+    }
 }
 
 .home {
@@ -127,7 +174,7 @@ section.active {
 }
 
 .home-detail h2 span::before {
-    content:  attr(data-text);
+    content: attr(data-text);
     position: absolute;
     width: 0;
     border-right: .2rem solid var(--main-color);
@@ -228,7 +275,7 @@ section.active {
 }
 
 @keyframes rotate-border {
-    100%{
+    100% {
         transform: rotate(360deg);
     }
 }
@@ -309,7 +356,7 @@ section.active {
 
 .services-box:hover .icon a {
     background: var(--main-color);
-} 
+}
 
 .services-box .icon a i {
     font-size: 3rem;
@@ -375,7 +422,7 @@ section.active {
     display: none;
 }
 
-.resume-detail.active{
+.resume-detail.active {
     display: block;
 }
 
@@ -476,7 +523,7 @@ section.active {
 }
 
 .resume-detail.skills .resume-item:hover span {
-    top:-25%;
+    top: -25%;
     opacity: 1;
     transform: scale(1);
 }
@@ -532,7 +579,7 @@ section.active {
     font-size: 1.6rem;
 }
 
-.portfolio-box .tech{
+.portfolio-box .tech {
     margin: 2rem 0;
     color: var(--main-color);
     border-bottom: .1 solid var(--white-color);
@@ -636,3 +683,77 @@ section.active {
 .portfolio-box .navigation .arrow-right {
     margin-left: 1.5rem;
 }
+
+.contact-container {
+    display: grid;
+    grid-template-columns: 1fr 1.3fr;
+    gap: 3rem;
+}
+
+.contact-container .contact-box:first-child {
+    align-self: center;    
+}
+
+.contact-box h2 {
+    font-size: 4.5rem;
+}
+
+.contact-box p {
+    font-size: 1.6rem;
+}
+
+.contact-box .desc {
+    margin: 1.5rem 0 2.5rem;
+}
+
+.contact-box .contact-detail {
+    display: flex;
+    align-items: center;
+    margin: 2rem 0;
+}
+
+.contact-detail i {
+    display: inline-flex;
+    background: var(--second-bg-color);
+    color: var(--main-color);
+    font-size: 3rem;
+    padding: 1.2rem;
+    border-radius: .6rem;
+    margin-right: 1.5rem;
+}
+
+.contact-detail .detail p:first-child {
+    color: var(--main-color);
+}
+
+.contact-box form {
+    background: var(--second-bg-color);
+    padding: 2.5rem 3.5rem 3.5rem;
+    border-radius: 1rem;
+    text-align: center;
+}
+
+.contact-box .heading {
+    font-size: 3.5rem;
+}
+
+.contact-box .field-box {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+}
+
+.contact-box .field-box input,
+.contact-box .field-box textarea {
+    padding: 1.5rem;
+    background: var(--bg-color);
+    border: .15rem solid var(--bg-color);
+    border-radius: .6rem;
+    font-size: 1.6rem;
+    color: var(--white-color);
+}
+
+.contact-box .field-box textarea {
+    grid-column: 1 / -1;;
+}
+
