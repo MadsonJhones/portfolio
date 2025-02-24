@@ -9,6 +9,14 @@ import { useContext } from "react";
 import { ThemeContext } from "../context/ThemeContext.jsx";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import projeto1Image1 from '../assets/images/projeto1-image1.png';
+import projeto1Image2 from '../assets/images/projeto1-image2.png';
+import projeto1Image3 from '../assets/images/projeto1-image3.png';
+import projeto1Image4 from '../assets/images/projeto1-image4.png';
+import projeto1Image5 from '../assets/images/projeto1-image5.png';
+import projeto1Image6 from '../assets/images/projeto1-image6.png';
+import projeto1Image7 from '../assets/images/projeto1-image7.png';
+import projeto1Image8 from '../assets/images/projeto1-image8.png';
 
 Modal.setAppElement("#root");
 
@@ -23,16 +31,16 @@ function ProjectsSection() {
             id: 1,
             title: "Diagno Wave",
             category: "Web",
-            images: ["/src/assets/images/projeto1-image1.png"], // Atualizado para src/assets
+            images: [projeto1Image1], // Atualizado para src/assets
             popupImages: [
-                "/src/assets/images/projeto1-image1.png",
-                "/src/assets/images/projeto1-image2.png",
-                "/src/assets/images/projeto1-image3.png",
-                "/src/assets/images/projeto1-image4.png",
-                "/src/assets/images/projeto1-image5.png",
-                "/src/assets/images/projeto1-image6.png",
-                "/src/assets/images/projeto1-image7.png",
-                "/src/assets/images/projeto1-image8.png",
+                projeto1Image1,
+                projeto1Image2,
+                projeto1Image3,
+                projeto1Image4,
+                projeto1Image5,
+                projeto1Image6,
+                projeto1Image7,
+                projeto1Image8,
             ],
             description: "DiagnoWave é uma IA genial que transforma imagens de ultrassonografia abdominal em diagnósticos precisos e instantâneos. Com redes neurais avançadas, analisa JPEG e DICOM em tempo real, rodando em desktops e smartphones com poder de nuvem. Intuitiva, aprende continuamente com médicos, eliminando vieses e entregando relatórios impressionantes. Segura, escalável e alinhada à LGPD, é a inovação que redefine a medicina!",
             tags: ["React", "TypeScript", "Tailwind", "Python", "TensorFlow"],
@@ -41,10 +49,10 @@ function ProjectsSection() {
             id: 2,
             title: "Apps Mobile",
             category: "Apps",
-            images: ["/src/assets/images/projeto1-image1.png"], // Atualizado para src/assets
+            images: [projeto1Image1], // Atualizado para src/assets
             popupImages: [
-                "/src/assets/images/projeto1-image1.png",
-                "/src/assets/images/projeto1-image2.png", // Adicionada uma terceira imagem como exemplo
+                projeto1Image1,
+                projeto1Image2, // Adicionada uma terceira imagem como exemplo
             ],
             description: "Um aplicativo mobile eficiente criado com React Native. Este projeto demonstra habilidades em desenvolvimento mobile com foco em desempenho e usabilidade.",
             tags: ["React Native"],
@@ -53,16 +61,16 @@ function ProjectsSection() {
             id: 3,
             title: "Diagno Wave",
             category: "IA",
-            images: ["/src/assets/images/projeto1-image1.png"], // Atualizado para src/assets
+            images: [projeto1Image1], // Atualizado para src/assets
             popupImages: [
-                "/src/assets/images/projeto1-image1.png",
-                "/src/assets/images/projeto1-image2.png",
-                "/src/assets/images/projeto1-image3.png",
-                "/src/assets/images/projeto1-image4.png",
-                "/src/assets/images/projeto1-image5.png",
-                "/src/assets/images/projeto1-image6.png",
-                "/src/assets/images/projeto1-image7.png",
-                "/src/assets/images/projeto1-image8.png",
+                projeto1Image1,
+                projeto1Image2,
+                projeto1Image3,
+                projeto1Image4,
+                projeto1Image5,
+                projeto1Image6,
+                projeto1Image7,
+                projeto1Image8,
             ],
             description: "DiagnoWave é uma IA genial que transforma imagens de ultrassonografia abdominal em diagnósticos precisos e instantâneos. Com redes neurais avançadas, analisa JPEG e DICOM em tempo real, rodando em desktops e smartphones com poder de nuvem. Intuitiva, aprende continuamente com médicos, eliminando vieses e entregando relatórios impressionantes. Segura, escalável e alinhada à LGPD, é a inovação que redefine a medicina!",
             tags: ["React", "TypeScript", "Tailwind", "Python", "TensorFlow"],
@@ -71,16 +79,16 @@ function ProjectsSection() {
             id: 4,
             title: "Diagno Wave",
             category: "UI/UX",
-            images: ["/src/assets/images/projeto1-image1.png"], // Atualizado para src/assets
+            images: [projeto1Image1], // Atualizado para src/assets
             popupImages: [
-                "/src/assets/images/projeto1-image1.png",
-                "/src/assets/images/projeto1-image2.png",
-                "/src/assets/images/projeto1-image3.png",
-                "/src/assets/images/projeto1-image4.png",
-                "/src/assets/images/projeto1-image5.png",
-                "/src/assets/images/projeto1-image6.png",
-                "/src/assets/images/projeto1-image7.png",
-                "/src/assets/images/projeto1-image8.png",
+                projeto1Image1,
+                projeto1Image2,
+                projeto1Image3,
+                projeto1Image4,
+                projeto1Image5,
+                projeto1Image6,
+                projeto1Image7,
+                projeto1Image8,
             ],
             description: "Projeto de design UI/UX para uma aplicação web responsivo, criado com Figma",
             tags: ["Figma"],
