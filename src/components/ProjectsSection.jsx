@@ -9,6 +9,8 @@ import { useContext } from "react";
 import { ThemeContext } from "../context/ThemeContext.jsx";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+
+// Importando as imagens corretamente
 import projeto1Image1 from '../assets/images/projeto1-image1.png';
 import projeto1Image2 from '../assets/images/projeto1-image2.png';
 import projeto1Image3 from '../assets/images/projeto1-image3.png';
@@ -31,7 +33,7 @@ function ProjectsSection() {
             id: 1,
             title: "Diagno Wave",
             category: "Web",
-            images: [projeto1Image1], // Atualizado para src/assets
+            images: [projeto1Image1], // Usando a importação correta
             popupImages: [
                 projeto1Image1,
                 projeto1Image2,
@@ -49,10 +51,10 @@ function ProjectsSection() {
             id: 2,
             title: "Apps Mobile",
             category: "Apps",
-            images: [projeto1Image1], // Atualizado para src/assets
+            images: [projeto1Image1], // Usando a importação correta
             popupImages: [
                 projeto1Image1,
-                projeto1Image2, // Adicionada uma terceira imagem como exemplo
+                projeto1Image2,
             ],
             description: "Um aplicativo mobile eficiente criado com React Native. Este projeto demonstra habilidades em desenvolvimento mobile com foco em desempenho e usabilidade.",
             tags: ["React Native"],
@@ -61,7 +63,7 @@ function ProjectsSection() {
             id: 3,
             title: "Diagno Wave",
             category: "IA",
-            images: [projeto1Image1], // Atualizado para src/assets
+            images: [projeto1Image1], // Usando a importação correta
             popupImages: [
                 projeto1Image1,
                 projeto1Image2,
@@ -79,7 +81,7 @@ function ProjectsSection() {
             id: 4,
             title: "Diagno Wave",
             category: "UI/UX",
-            images: [projeto1Image1], // Atualizado para src/assets
+            images: [projeto1Image1], // Usando a importação correta
             popupImages: [
                 projeto1Image1,
                 projeto1Image2,
@@ -164,7 +166,7 @@ function ProjectsSection() {
                                 src={project.images[0]}
                                 alt={project.title}
                                 className="w-full h-48 object-cover"
-                                onError={(e) => e.target.src = '/src/assets/images/default-image.png'} // Atualizado para src/assets
+                                onError={(e) => e.target.src = '/src/assets/images/default-image.png'} // Fallback para imagem padrão
                             />
                             <h3 className="p-4 text-signalWhite text-lg"> {project.title}</h3>
                         </motion.div>
@@ -197,7 +199,7 @@ function ProjectsSection() {
                                         src={img}
                                         alt={`${selectedProject.title} ${idx}`}
                                         className="w-full h-48 object-contain rounded-md"
-                                        onError={(e) => e.target.src = '/src/assets/images/default-image.png'} // Atualizado para src/assets
+                                        onError={(e) => e.target.src = '/src/assets/images/default-image.png'} // Fallback para imagem padrão
                                     />
                                 </div>
                             ))}
