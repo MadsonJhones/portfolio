@@ -1,0 +1,38 @@
+/* Importa fontes do Google Fonts para tipografia */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Merriweather:wght@400;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Define a fonte padrão do corpo como Open Sans */
+body {
+  font-family: 'Open Sans', sans-serif;
+  margin: 0;
+  padding: 0;
+  user-select: none; /* Desativa a seleção de texto em toda a página */
+}
+
+/* Define a fonte Merriweather para títulos */
+h1, h2, h3 {
+  font-family: 'Merriweather', serif;
+}
+
+/* Efeito de brilho para hover */
+.glow-effect:hover {
+  box-shadow: 0 0 15px rgba(0, 204, 255, 0.8), 0 0 30px rgb(0, 204, 255, 0.5);
+}
+
+/* Estilo para a barra de rolagem */
+::-webkit-scrollbar {
+  width: 4px; /* Deixe a barra mais fina */
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #00CCFF; /* Cor azul */
+  border-radius: 0px;
+}
+
+::-webkit-scrollbar-track {
+  background: #1A0033; /* Cor do fundo da barra de rolagem */
+}
