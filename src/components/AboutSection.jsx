@@ -58,7 +58,7 @@ function AboutSection() {
                 options={{
                     background: { color: { value: theme === "dark" ? "#0A001A" : "#0A001A" } },
                     particles: {
-                        number: { value: 35 },
+                        number: { value: 60 },
                         size: { value: 3 },
                         color: { value: ["#00CCFF", "#00FFAA", "#FF00FF"] },
                         opacity: { value: 0.7 },
@@ -70,11 +70,12 @@ function AboutSection() {
                         events: {
                             onhover: { enable: true, mode: "grab" },
                             onclick: { enable: true, mode: "repulse" },
+                            ontouchstart: { enable: true, mode: "repulse" }, // Adicionado suporte para toque
                             resize: true,
                         },
                         modes: {
                             grab: { distance: 200, links: { opacity: 1, color: "#FFD700" } },
-                            repulse: { distance: 200, duration: 0.4, speed: 5 },
+                            repulse: { distance: 200, duration: 0.2, speed: 5 },
                         },
                     },
                 }}
@@ -89,13 +90,12 @@ function AboutSection() {
                             key={index}
                             onClick={() => setActiveTab(tab)}
                             whileHover={{ scale: 1.05 }}
-                            className={`w-full px-4 py-2 text-center rounded-lg transition-all relative ${theme === "dark" ? "bg-[#1e2a445f] text-signalWhite" : "bg-[#1e2a445f] text-signalWhite" 
+                            className={`w-full px-4 py-2 text-center rounded-lg transition-all relative ${theme === "dark" ? "bg-[#1e2a445f] text-signalWhite" : "bg-[#1e2a445f] text-signalWhite"
                                 } rounded-lg transition-all text-center glow-effect ${activeTab === tab ? "text-axonCyan font-bold before:content-[''] before:absolute before:left-0 before:top-1/2 before:-translate-y-1/2 before:w-1  before:h-full before:bg-axonCyan" : ""}`}
                         >
                             {tab === "experience" ? "Experiência" : tab === "education" ? "Formação" : "Sobre mim"}
                         </motion.button>
                     ))}
-
                 </div>
 
                 {/* Conteúdo */}

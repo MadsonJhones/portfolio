@@ -34,6 +34,19 @@ function HeroSection({ id }) {
                             value: 3,
                         },
                     },
+                    interactivity: {
+                        detect_on: "window",
+                        events: {
+                            onhover: { enable: true, mode: "grab" },
+                            onclick: { enable: true, mode: "repulse" },
+                            ontouchstart: { enable: true, mode: "repulse" }, // Adicionado suporte para toque
+                            resize: true,
+                        },
+                        modes: {
+                            grab: { distance: 200, links: { opacity: 1, color: "#00CCFF" } },
+                            repulse: { distance: 200, duration: 0.2, speed: 5 },
+                        },
+                    },
                 }}
             />
 

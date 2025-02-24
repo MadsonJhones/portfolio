@@ -116,7 +116,7 @@ function ProjectsSection() {
                 options={{
                     background: { color: { value: theme === "dark" ? "#0A001A" : "#1A0033" } },
                     particles: {
-                        number: { value: 40 },
+                        number: { value: 60 },
                         size: { value: 3 },
                         color: { value: ["#00CCFF", "#00FFAA", "#FF00FF"] },
                         opacity: { value: 1 },
@@ -128,11 +128,12 @@ function ProjectsSection() {
                         events: {
                             onhover: { enable: true, mode: "grab" },
                             onclick: { enable: true, mode: "repulse" },
+                            ontouchstart: { enable: true, mode: "repulse" }, // Adicionado suporte para toque
                             resize: true,
                         },
                         modes: {
                             grab: { distance: 200, links: { opacity: 1, color: "#00CCFF" } },
-                            repulse: { distance: 200, duration: 0.4, speed: 5 },
+                            repulse: { distance: 200, duration: 0.2, speed: 5 },
                         },
                     },
                 }}
