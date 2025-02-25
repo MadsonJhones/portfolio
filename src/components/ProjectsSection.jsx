@@ -10,17 +10,14 @@ import { ThemeContext } from "../context/ThemeContext.jsx";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
-// Importando os projetos por categoria
+// Importando os projetos por categoria (mantendo apenas as categorias solicitadas)
 import WebProjects from "../projects/Web.js";
 import AppsProjects from "../projects/Apps.js";
 import IAProjects from "../projects/IA.js";
-import UIUXProjects from "../projects/UIUX.js";
-import APIsMicrosservicosProjects from "../projects/APIsMicrosservicos.js";
-import ContribuicoesOpenSourceProjects from "../projects/ContribuicoesOpenSource.js";
 import JogosInteratividadeProjects from "../projects/JogosInteratividade.js";
 import TendenciasEmergentesProjects from "../projects/TendenciasEmergentes.js";
 
-// Importando imagens padrão (ajuste conforme necessário)
+// Importando imagens padrão
 import defaultImage from "../assets/images/default-image.png";
 
 Modal.setAppElement("#root");
@@ -31,14 +28,11 @@ function ProjectsSection() {
     const [filter, setFilter] = useState("Tudo");
     const [selectedProject, setSelectedProject] = useState(null);
 
-    // Combinando todos os projetos das categorias
+    // Combinando todos os projetos das categorias restantes
     const allProjects = [
         ...WebProjects,
         ...AppsProjects,
         ...IAProjects,
-        ...UIUXProjects,
-        ...APIsMicrosservicosProjects,
-        ...ContribuicoesOpenSourceProjects,
         ...JogosInteratividadeProjects,
         ...TendenciasEmergentesProjects,
     ];
@@ -88,7 +82,7 @@ function ProjectsSection() {
             <div className="relative z-10 container mx-auto px-4">
                 <h2 className="text-3xl md:text-4xl text-axonCyan text-center mb-10">Projetos</h2>
                 <div className="flex justify-center gap-4 mb-10 flex-wrap">
-                    {["Tudo", "Web", "Apps", "IA", "UI/UX", "APIs e Microsserviços", "Contribuições Open Source", "Jogos e Interatividade", "Tendências Emergentes"].map((cat) => (
+                    {["Tudo", "Web", "Apps", "IA", "Jogos e Interatividade", "Tendências Emergentes"].map((cat) => (
                         <button
                             key={cat}
                             onClick={() => setFilter(cat)}
