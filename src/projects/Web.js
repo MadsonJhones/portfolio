@@ -29,25 +29,25 @@ const WebProjects = [
         description: "DiagnoWave é uma IA avançada que transforma imagens de ultrassonografia abdominal em diagnósticos precisos e instantâneos, rodando em qualquer dispositivo com poder de nuvem. Segura, escalável e alinhada à LGPD, aprende continuamente com médicos para eliminar vieses e revolucionar a medicina.",
         tags: ["React", "TypeScript", "Tailwind", "Python", "TensorFlow"],
     },
-    {
-        id: getNextId(), // Gera automaticamente o próximo ID único
-        title: "Site E-commerce",
-        category: "Web",
-        images: [defaultImage], // Apenas uma imagem principal
-        popupImages: [defaultImage, defaultImage],
-        description: "Um site de e-commerce responsivo desenvolvido com React e Tailwind CSS, integrado com Stripe para pagamentos.",
-        tags: ["React", "Tailwind", "Stripe"],
-    },
-    {
-        id: getNextId(), // Gera automaticamente o próximo ID único
-        title: "Portfólio Pessoal",
-        category: "Web",
-        images: [defaultImage], // Apenas uma imagem principal
-        popupImages: [defaultImage, defaultImage],
-        description: "Portfólio pessoal interativo criado com Vite, React e Framer Motion, destacando projetos e habilidades.",
-        tags: ["React", "Vite", "Framer Motion"],
-    },
-    // Continue adicionando mais projetos (até 10), usando getNextId() para cada novo projeto
+//     {
+//         id: getNextId(), // Gera automaticamente o próximo ID único
+//         title: "Site E-commerce",
+//         category: "Web",
+//         images: [defaultImage], // Apenas uma imagem principal
+//         popupImages: [defaultImage, defaultImage],
+//         description: "Um site de e-commerce responsivo desenvolvido com React e Tailwind CSS, integrado com Stripe para pagamentos.",
+//         tags: ["React", "Tailwind", "Stripe"],
+//     },
+//     {
+//         id: getNextId(), // Gera automaticamente o próximo ID único
+//         title: "Portfólio Pessoal",
+//         category: "Web",
+//         images: [defaultImage], // Apenas uma imagem principal
+//         popupImages: [defaultImage, defaultImage],
+//         description: "Portfólio pessoal interativo criado com Vite, React e Framer Motion, destacando projetos e habilidades.",
+//         tags: ["React", "Vite", "Framer Motion"],
+//     },
+//     // Continue adicionando mais projetos (até 10), usando getNextId() para cada novo projeto
 ];
 
 export default WebProjects;
