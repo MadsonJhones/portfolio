@@ -26,7 +26,7 @@ const WebProjects = [
             diagnoimage7,
             diagnoimage8,
         ],
-        description: "DiagnoWave é uma IA genial que transforma imagens de ultrassonografia abdominal em diagnósticos precisos e instantâneos. Com redes neurais avançadas, analisa JPEG e DICOM em tempo real, rodando em desktops e smartphones com poder de nuvem. Intuitiva, aprende continuamente com médicos, eliminando vieses e entregando relatórios impressionantes. Segura, escalável e alinhada à LGPD, é a inovação que redefine a medicina!",
+        description: "DiagnoWave é uma IA avançada que transforma imagens de ultrassonografia abdominal em diagnósticos precisos e instantâneos, rodando em qualquer dispositivo com poder de nuvem. Segura, escalável e alinhada à LGPD, aprende continuamente com médicos para eliminar vieses e revolucionar a medicina.",
         tags: ["React", "TypeScript", "Tailwind", "Python", "TensorFlow"],
     },
     {
