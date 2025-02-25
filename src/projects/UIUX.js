@@ -1,35 +1,21 @@
 // src/projects/UIUX.js
 import { getNextId } from "./idCounter.js";
-import diagnoimage1 from "../assets/images/diagnoWave/diagno-image1.png";
-import diagnoimage2 from "../assets/images/diagnoWave/diagno-image2.png";
-import diagnoimage3 from "../assets/images/diagnoWave/diagno-image3.png";
-import diagnoimage4 from "../assets/images/diagnoWave/diagno-image4.png";
-import diagnoimage5 from "../assets/images/diagnoWave/diagno-image5.png";
-import diagnoimage6 from "../assets/images/diagnoWave/diagno-image6.png";
-import diagnoimage7 from "../assets/images/diagnoWave/diagno-image7.png";
-import diagnoimage8 from "../assets/images/diagnoWave/diagno-image8.png";
 import defaultImage from "../assets/images/default-image.png";
 
 const UIUXProjects = [
     {
-        id: getNextId(), // Gera automaticamente um ID único 
-        title: "Diagno Wave",
+        id: getNextId(), // Gera automaticamente um ID único
+        title: "Default",
         category: "UI/UX",
-        images: [diagnoimage1],
+        images: [defaultImage], // Apenas uma imagem principal
         popupImages: [
-            diagnoimage1,
-            diagnoimage2,
-            diagnoimage3,
-            diagnoimage4,
-            diagnoimage5,
-            diagnoimage6,
-            diagnoimage7,
-            diagnoimage8,
+            defaultImage,
+            defaultImage,
         ],
-        description: "Projeto de design UI/UX para uma aplicação web responsivo, criado com Figma",
-        tags: ["Figma"],
+        description: "Um aplicativo mobile eficiente criado com React Native. Este projeto demonstra habilidades em desenvolvimento mobile com foco em desempenho e usabilidade.",
+        tags: ["React Native"],
     },
-    // Continue adicionando mais projetos, usando getNextId() para cada novo projeto
+    // Continue adicionando mais projetos (até 10), usando getNextId() para cada novo projeto
 ];
 
 export default UIUXProjects;
